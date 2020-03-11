@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>My first styled page</title>
+  <style type="text/css">
+  body {
+    padding-left: 11em;
+    font-family: Georgia, "Times New Roman",
+          Times, serif;
+    color: purple;
+    background-color: #d8da3d }
+
+  h1 {
+    font-family: Helvetica, Geneva, Arial,
+          SunSans-Regular, sans-serif }
+  </style>
+</head>
+
+<body>
+  <%- include('partials/nav.ejs'); %>
+<!-- Main content -->
+<h1>Welcome to profile of <%= person %> </h1>
+<p>Age: <%= data.age %></p>
+<p>Job: <%= data.job %></p>
+<h1>Hobbies</h1>
+<ul>
+  <% data.hobbies.forEach(function(item){ %>
+    <li><%= item %> </li>
+  <% }); %>
+
+</ul>
+<p>Welcome to this page!
+
+</<body>
+  </html>
